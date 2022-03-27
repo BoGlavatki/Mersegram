@@ -1,0 +1,835 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4394C26ED003557DF75AA72F /* Pods_Mersegram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9091810158D9836F5FB07FE2 /* Pods_Mersegram.framework */; };
+		5851FED0855A00EE451E14EF /* Pods_Mersegram_MersegramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866051926E15890C919EE942 /* Pods_Mersegram_MersegramUITests.framework */; };
+		76C3273C40C0E40C7BD7A4D6 /* Pods_MersegramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9778E8D6810602DF5150776 /* Pods_MersegramTests.framework */; };
+		782D531427E6439900FB97C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782D531327E6439900FB97C4 /* AppDelegate.swift */; };
+		782D531627E6439900FB97C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782D531527E6439900FB97C4 /* SceneDelegate.swift */; };
+		782D531D27E6439C00FB97C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 782D531C27E6439C00FB97C4 /* Assets.xcassets */; };
+		782D532027E6439C00FB97C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782D531E27E6439C00FB97C4 /* LaunchScreen.storyboard */; };
+		782D532B27E6439C00FB97C4 /* MersegramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782D532A27E6439C00FB97C4 /* MersegramTests.swift */; };
+		782D533527E6439C00FB97C4 /* MersegramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782D533427E6439C00FB97C4 /* MersegramUITests.swift */; };
+		782D533727E6439C00FB97C4 /* MersegramUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782D533627E6439C00FB97C4 /* MersegramUITestsLaunchTests.swift */; };
+		782D534427E6444A00FB97C4 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782D534327E6444A00FB97C4 /* Start.storyboard */; };
+		782D534627E6745100FB97C4 /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782D534527E6745100FB97C4 /* LogInController.swift */; };
+		782D534827E6748E00FB97C4 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782D534727E6748E00FB97C4 /* RegistrationViewController.swift */; };
+		78419D9827E8CCD4003C481C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78419D9727E8CCD4003C481C /* GoogleService-Info.plist */; };
+		78989F5B27EB2EF2007C0176 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78989F5A27EB2EF2007C0176 /* Home.storyboard */; };
+		78989F5D27EB2F0B007C0176 /* Discovery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78989F5C27EB2F0B007C0176 /* Discovery.storyboard */; };
+		78989F5F27EB2F30007C0176 /* Activity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78989F5E27EB2F30007C0176 /* Activity.storyboard */; };
+		78989F6127EB2F64007C0176 /* Share.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78989F6027EB2F64007C0176 /* Share.storyboard */; };
+		78989F6327EB2F77007C0176 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78989F6227EB2F77007C0176 /* Profile.storyboard */; };
+		78989F6527EBC21C007C0176 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78989F6427EBC21C007C0176 /* AuthenticationService.swift */; };
+		78D6220927EB23290075AD4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78D6220827EB23290075AD4F /* Main.storyboard */; };
+		78E9FB3B27EA2CE60056B647 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E9FB3A27EA2CE60056B647 /* HomeViewController.swift */; };
+		78E9FB3D27EA2CFA0056B647 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E9FB3C27EA2CFA0056B647 /* DiscoveryViewController.swift */; };
+		78E9FB3F27EA2D030056B647 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E9FB3E27EA2D030056B647 /* ShareViewController.swift */; };
+		78E9FB4127EA2D0F0056B647 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E9FB4027EA2D0F0056B647 /* ActivityViewController.swift */; };
+		78E9FB4327EA2D180056B647 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E9FB4227EA2D180056B647 /* ProfileViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		782D532727E6439C00FB97C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 782D530827E6439900FB97C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 782D530F27E6439900FB97C4;
+			remoteInfo = Mersegram;
+		};
+		782D533127E6439C00FB97C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 782D530827E6439900FB97C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 782D530F27E6439900FB97C4;
+			remoteInfo = Mersegram;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0224E6294CFA263086213E38 /* Pods-Mersegram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mersegram.debug.xcconfig"; path = "Target Support Files/Pods-Mersegram/Pods-Mersegram.debug.xcconfig"; sourceTree = "<group>"; };
+		31757C4CCA17C55CCF5F785B /* Pods-Mersegram-MersegramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mersegram-MersegramUITests.release.xcconfig"; path = "Target Support Files/Pods-Mersegram-MersegramUITests/Pods-Mersegram-MersegramUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6A2F96714ACE37E31392DD15 /* Pods-MersegramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MersegramTests.debug.xcconfig"; path = "Target Support Files/Pods-MersegramTests/Pods-MersegramTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6B8BB81C2E5BBF651D688C11 /* Pods-MersegramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MersegramTests.release.xcconfig"; path = "Target Support Files/Pods-MersegramTests/Pods-MersegramTests.release.xcconfig"; sourceTree = "<group>"; };
+		782D531027E6439900FB97C4 /* Mersegram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mersegram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		782D531327E6439900FB97C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		782D531527E6439900FB97C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		782D531C27E6439C00FB97C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		782D531F27E6439C00FB97C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		782D532127E6439C00FB97C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		782D532627E6439C00FB97C4 /* MersegramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MersegramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		782D532A27E6439C00FB97C4 /* MersegramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MersegramTests.swift; sourceTree = "<group>"; };
+		782D533027E6439C00FB97C4 /* MersegramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MersegramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		782D533427E6439C00FB97C4 /* MersegramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MersegramUITests.swift; sourceTree = "<group>"; };
+		782D533627E6439C00FB97C4 /* MersegramUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MersegramUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		782D534327E6444A00FB97C4 /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
+		782D534527E6745100FB97C4 /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
+		782D534727E6748E00FB97C4 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		78419D9727E8CCD4003C481C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../../Users/boleslavglavatki/Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		78989F5A27EB2EF2007C0176 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		78989F5C27EB2F0B007C0176 /* Discovery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discovery.storyboard; sourceTree = "<group>"; };
+		78989F5E27EB2F30007C0176 /* Activity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Activity.storyboard; sourceTree = "<group>"; };
+		78989F6027EB2F64007C0176 /* Share.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Share.storyboard; sourceTree = "<group>"; };
+		78989F6227EB2F77007C0176 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		78989F6427EBC21C007C0176 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		78D6220827EB23290075AD4F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		78E9FB3A27EA2CE60056B647 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		78E9FB3C27EA2CFA0056B647 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
+		78E9FB3E27EA2D030056B647 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		78E9FB4027EA2D0F0056B647 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		78E9FB4227EA2D180056B647 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		866051926E15890C919EE942 /* Pods_Mersegram_MersegramUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mersegram_MersegramUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9091810158D9836F5FB07FE2 /* Pods_Mersegram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mersegram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C933EBB8E1EA3885460BEA6B /* Pods-Mersegram-MersegramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mersegram-MersegramUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mersegram-MersegramUITests/Pods-Mersegram-MersegramUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E34D3C77AE7EF90B82D705EF /* Pods-Mersegram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mersegram.release.xcconfig"; path = "Target Support Files/Pods-Mersegram/Pods-Mersegram.release.xcconfig"; sourceTree = "<group>"; };
+		F9778E8D6810602DF5150776 /* Pods_MersegramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MersegramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		782D530D27E6439900FB97C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4394C26ED003557DF75AA72F /* Pods_Mersegram.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		782D532327E6439C00FB97C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76C3273C40C0E40C7BD7A4D6 /* Pods_MersegramTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		782D532D27E6439C00FB97C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5851FED0855A00EE451E14EF /* Pods_Mersegram_MersegramUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		223527D4AC078085756E9802 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9091810158D9836F5FB07FE2 /* Pods_Mersegram.framework */,
+				866051926E15890C919EE942 /* Pods_Mersegram_MersegramUITests.framework */,
+				F9778E8D6810602DF5150776 /* Pods_MersegramTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5402AFBDE41B3F5A496D1FD7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0224E6294CFA263086213E38 /* Pods-Mersegram.debug.xcconfig */,
+				E34D3C77AE7EF90B82D705EF /* Pods-Mersegram.release.xcconfig */,
+				C933EBB8E1EA3885460BEA6B /* Pods-Mersegram-MersegramUITests.debug.xcconfig */,
+				31757C4CCA17C55CCF5F785B /* Pods-Mersegram-MersegramUITests.release.xcconfig */,
+				6A2F96714ACE37E31392DD15 /* Pods-MersegramTests.debug.xcconfig */,
+				6B8BB81C2E5BBF651D688C11 /* Pods-MersegramTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		782D530727E6439900FB97C4 = {
+			isa = PBXGroup;
+			children = (
+				782D531227E6439900FB97C4 /* Mersegram */,
+				782D532927E6439C00FB97C4 /* MersegramTests */,
+				782D533327E6439C00FB97C4 /* MersegramUITests */,
+				782D531127E6439900FB97C4 /* Products */,
+				5402AFBDE41B3F5A496D1FD7 /* Pods */,
+				223527D4AC078085756E9802 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+			tabWidth = 3;
+			usesTabs = 0;
+		};
+		782D531127E6439900FB97C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				782D531027E6439900FB97C4 /* Mersegram.app */,
+				782D532627E6439C00FB97C4 /* MersegramTests.xctest */,
+				782D533027E6439C00FB97C4 /* MersegramUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		782D531227E6439900FB97C4 /* Mersegram */ = {
+			isa = PBXGroup;
+			children = (
+				782D531327E6439900FB97C4 /* AppDelegate.swift */,
+				782D534527E6745100FB97C4 /* LogInController.swift */,
+				782D531527E6439900FB97C4 /* SceneDelegate.swift */,
+				782D531C27E6439C00FB97C4 /* Assets.xcassets */,
+				782D531E27E6439C00FB97C4 /* LaunchScreen.storyboard */,
+				78419D9727E8CCD4003C481C /* GoogleService-Info.plist */,
+				782D532127E6439C00FB97C4 /* Info.plist */,
+				782D534327E6444A00FB97C4 /* Start.storyboard */,
+				78D6220827EB23290075AD4F /* Main.storyboard */,
+				78989F6227EB2F77007C0176 /* Profile.storyboard */,
+				78989F6027EB2F64007C0176 /* Share.storyboard */,
+				78989F5E27EB2F30007C0176 /* Activity.storyboard */,
+				78989F5C27EB2F0B007C0176 /* Discovery.storyboard */,
+				78989F5A27EB2EF2007C0176 /* Home.storyboard */,
+				78E9FB3A27EA2CE60056B647 /* HomeViewController.swift */,
+				78E9FB3C27EA2CFA0056B647 /* DiscoveryViewController.swift */,
+				78E9FB3E27EA2D030056B647 /* ShareViewController.swift */,
+				78E9FB4027EA2D0F0056B647 /* ActivityViewController.swift */,
+				78E9FB4227EA2D180056B647 /* ProfileViewController.swift */,
+				78989F6427EBC21C007C0176 /* AuthenticationService.swift */,
+				782D534727E6748E00FB97C4 /* RegistrationViewController.swift */,
+			);
+			path = Mersegram;
+			sourceTree = "<group>";
+		};
+		782D532927E6439C00FB97C4 /* MersegramTests */ = {
+			isa = PBXGroup;
+			children = (
+				782D532A27E6439C00FB97C4 /* MersegramTests.swift */,
+			);
+			path = MersegramTests;
+			sourceTree = "<group>";
+		};
+		782D533327E6439C00FB97C4 /* MersegramUITests */ = {
+			isa = PBXGroup;
+			children = (
+				782D533427E6439C00FB97C4 /* MersegramUITests.swift */,
+				782D533627E6439C00FB97C4 /* MersegramUITestsLaunchTests.swift */,
+			);
+			path = MersegramUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		782D530F27E6439900FB97C4 /* Mersegram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 782D533A27E6439C00FB97C4 /* Build configuration list for PBXNativeTarget "Mersegram" */;
+			buildPhases = (
+				949CAFF7CF7E7ADD65E6834A /* [CP] Check Pods Manifest.lock */,
+				782D530C27E6439900FB97C4 /* Sources */,
+				782D530D27E6439900FB97C4 /* Frameworks */,
+				782D530E27E6439900FB97C4 /* Resources */,
+				4509D361D748E258F3425BDB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mersegram;
+			productName = Mersegram;
+			productReference = 782D531027E6439900FB97C4 /* Mersegram.app */;
+			productType = "com.apple.product-type.application";
+		};
+		782D532527E6439C00FB97C4 /* MersegramTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 782D533D27E6439C00FB97C4 /* Build configuration list for PBXNativeTarget "MersegramTests" */;
+			buildPhases = (
+				96B9858E6E8B0419BB6818AA /* [CP] Check Pods Manifest.lock */,
+				782D532227E6439C00FB97C4 /* Sources */,
+				782D532327E6439C00FB97C4 /* Frameworks */,
+				782D532427E6439C00FB97C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				782D532827E6439C00FB97C4 /* PBXTargetDependency */,
+			);
+			name = MersegramTests;
+			productName = MersegramTests;
+			productReference = 782D532627E6439C00FB97C4 /* MersegramTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		782D532F27E6439C00FB97C4 /* MersegramUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 782D534027E6439C00FB97C4 /* Build configuration list for PBXNativeTarget "MersegramUITests" */;
+			buildPhases = (
+				9DC2551DD1A0BB7AF993DF9F /* [CP] Check Pods Manifest.lock */,
+				782D532C27E6439C00FB97C4 /* Sources */,
+				782D532D27E6439C00FB97C4 /* Frameworks */,
+				782D532E27E6439C00FB97C4 /* Resources */,
+				1BD893FC0D95E833D7A35620 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				782D533227E6439C00FB97C4 /* PBXTargetDependency */,
+			);
+			name = MersegramUITests;
+			productName = MersegramUITests;
+			productReference = 782D533027E6439C00FB97C4 /* MersegramUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		782D530827E6439900FB97C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					782D530F27E6439900FB97C4 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					782D532527E6439C00FB97C4 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 782D530F27E6439900FB97C4;
+					};
+					782D532F27E6439C00FB97C4 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 782D530F27E6439900FB97C4;
+					};
+				};
+			};
+			buildConfigurationList = 782D530B27E6439900FB97C4 /* Build configuration list for PBXProject "Mersegram" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 782D530727E6439900FB97C4;
+			productRefGroup = 782D531127E6439900FB97C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				782D530F27E6439900FB97C4 /* Mersegram */,
+				782D532527E6439C00FB97C4 /* MersegramTests */,
+				782D532F27E6439C00FB97C4 /* MersegramUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		782D530E27E6439900FB97C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78989F5D27EB2F0B007C0176 /* Discovery.storyboard in Resources */,
+				782D532027E6439C00FB97C4 /* LaunchScreen.storyboard in Resources */,
+				78989F6327EB2F77007C0176 /* Profile.storyboard in Resources */,
+				78D6220927EB23290075AD4F /* Main.storyboard in Resources */,
+				78419D9827E8CCD4003C481C /* GoogleService-Info.plist in Resources */,
+				78989F5B27EB2EF2007C0176 /* Home.storyboard in Resources */,
+				78989F6127EB2F64007C0176 /* Share.storyboard in Resources */,
+				782D531D27E6439C00FB97C4 /* Assets.xcassets in Resources */,
+				782D534427E6444A00FB97C4 /* Start.storyboard in Resources */,
+				78989F5F27EB2F30007C0176 /* Activity.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		782D532427E6439C00FB97C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		782D532E27E6439C00FB97C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BD893FC0D95E833D7A35620 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mersegram-MersegramUITests/Pods-Mersegram-MersegramUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mersegram-MersegramUITests/Pods-Mersegram-MersegramUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mersegram-MersegramUITests/Pods-Mersegram-MersegramUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4509D361D748E258F3425BDB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mersegram/Pods-Mersegram-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mersegram/Pods-Mersegram-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mersegram/Pods-Mersegram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		949CAFF7CF7E7ADD65E6834A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mersegram-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96B9858E6E8B0419BB6818AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MersegramTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DC2551DD1A0BB7AF993DF9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mersegram-MersegramUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		782D530C27E6439900FB97C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78E9FB3F27EA2D030056B647 /* ShareViewController.swift in Sources */,
+				78E9FB3B27EA2CE60056B647 /* HomeViewController.swift in Sources */,
+				78E9FB3D27EA2CFA0056B647 /* DiscoveryViewController.swift in Sources */,
+				78E9FB4127EA2D0F0056B647 /* ActivityViewController.swift in Sources */,
+				782D531427E6439900FB97C4 /* AppDelegate.swift in Sources */,
+				782D534627E6745100FB97C4 /* LogInController.swift in Sources */,
+				78E9FB4327EA2D180056B647 /* ProfileViewController.swift in Sources */,
+				782D534827E6748E00FB97C4 /* RegistrationViewController.swift in Sources */,
+				782D531627E6439900FB97C4 /* SceneDelegate.swift in Sources */,
+				78989F6527EBC21C007C0176 /* AuthenticationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		782D532227E6439C00FB97C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				782D532B27E6439C00FB97C4 /* MersegramTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		782D532C27E6439C00FB97C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				782D533727E6439C00FB97C4 /* MersegramUITestsLaunchTests.swift in Sources */,
+				782D533527E6439C00FB97C4 /* MersegramUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		782D532827E6439C00FB97C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 782D530F27E6439900FB97C4 /* Mersegram */;
+			targetProxy = 782D532727E6439C00FB97C4 /* PBXContainerItemProxy */;
+		};
+		782D533227E6439C00FB97C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 782D530F27E6439900FB97C4 /* Mersegram */;
+			targetProxy = 782D533127E6439C00FB97C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		782D531E27E6439C00FB97C4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				782D531F27E6439C00FB97C4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		782D533827E6439C00FB97C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		782D533927E6439C00FB97C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		782D533B27E6439C00FB97C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0224E6294CFA263086213E38 /* Pods-Mersegram.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X4HARF4Z42;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Mersegram/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Start;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Softlearning.Mersegram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		782D533C27E6439C00FB97C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E34D3C77AE7EF90B82D705EF /* Pods-Mersegram.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X4HARF4Z42;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Mersegram/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Start;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Softlearning.Mersegram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		782D533E27E6439C00FB97C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A2F96714ACE37E31392DD15 /* Pods-MersegramTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X4HARF4Z42;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Softlearning.MersegramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mersegram.app/Mersegram";
+			};
+			name = Debug;
+		};
+		782D533F27E6439C00FB97C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B8BB81C2E5BBF651D688C11 /* Pods-MersegramTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X4HARF4Z42;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Softlearning.MersegramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mersegram.app/Mersegram";
+			};
+			name = Release;
+		};
+		782D534127E6439C00FB97C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C933EBB8E1EA3885460BEA6B /* Pods-Mersegram-MersegramUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X4HARF4Z42;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Softlearning.MersegramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mersegram;
+			};
+			name = Debug;
+		};
+		782D534227E6439C00FB97C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31757C4CCA17C55CCF5F785B /* Pods-Mersegram-MersegramUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X4HARF4Z42;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Softlearning.MersegramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mersegram;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		782D530B27E6439900FB97C4 /* Build configuration list for PBXProject "Mersegram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				782D533827E6439C00FB97C4 /* Debug */,
+				782D533927E6439C00FB97C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		782D533A27E6439C00FB97C4 /* Build configuration list for PBXNativeTarget "Mersegram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				782D533B27E6439C00FB97C4 /* Debug */,
+				782D533C27E6439C00FB97C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		782D533D27E6439C00FB97C4 /* Build configuration list for PBXNativeTarget "MersegramTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				782D533E27E6439C00FB97C4 /* Debug */,
+				782D533F27E6439C00FB97C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		782D534027E6439C00FB97C4 /* Build configuration list for PBXNativeTarget "MersegramUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				782D534127E6439C00FB97C4 /* Debug */,
+				782D534227E6439C00FB97C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 782D530827E6439900FB97C4 /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods_Mersegram {
+  umbrella header "Pods-Mersegram-umbrella.h"
+
+  export *
+  module * { export * }
+}
