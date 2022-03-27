@@ -51,8 +51,10 @@ class RegistrationViewController: UIViewController, UIImagePickerControllerDeleg
         
         // Do any additional setup after loading the view.
     }
-    
-
+    // MARK: - Dismiss Keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
    //MARK METHODEN
     func setupView(){
         
@@ -82,20 +84,21 @@ class RegistrationViewController: UIViewController, UIImagePickerControllerDeleg
         
         attributetText.append(NSAttributedString(string: " " + "Login", attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17), NSAttributedString.Key.foregroundColor : UIColor.white]))
         
-        haveAnAccountButton.setAttributedTitle(attributetText, for: .normal)
+        haveAnAccountButton.setAttributedTitle(attributetText, for: UIControl.State.normal)
     
     
     }
     
     func addTargetToTextField(){
         
-        userNameTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
-        passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
-        emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        userNameTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
         
     }
     @objc func textFieldDidChange(){
-        let isText = userNameTextField.text?.count ?? 0 > 0 && emailTextField.text?.count ?? 0 > 0 && passwordTextField.text?.count ?? 0 > 0
+        let isText = userNameTextField.text?.count ?? 0 > 0 && emailTextField.text?.count ??
+        0 > 0 && passwordTextField.text?.count ?? 0 > 0
         
         if isText{
             
@@ -148,28 +151,65 @@ class RegistrationViewController: UIViewController, UIImagePickerControllerDeleg
     //MARK ACTION
     //ERSTELLEN DES USERS NACH DEM BUTTEN ERSTELLEN ANGETIPT WIRD
     @IBAction func createButtonTaped(_ sender: UIButton) {
-        view.endEditing(true)
      
-        if selectedImage == nil {
-            print("Bitte foto wählen")
-            return
-        }
+        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { [self] (data, error) in
+            if let err = error{
+                print(err.localizedDescription)
+                return
+            }
+         
+            guard let newUser = data?.user else{ return }
+            let uId = newUser.uid
+            print("User: ", newUser.email , " ID: ", uId)
            
-        guard let image = selectedImage else {return}
-        guard let imageData = image.jpegData(compressionQuality: 0.1)
-        else {return}
-        AuthenticationService.createUser(username: userNameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, imageData: imageData, onSuccess:  {
+            self.uploadUserData(uid: uId, username:  self.userNameTextField.text!, email: self.emailTextField.text!)
             self.performSegue(withIdentifier: "loginSegue", sender: nil)
-            self.performSegue(withIdentifier: "registration", sender: nil)
-        }) { (error) in
-            print (error!)
+           
             
         }
-
         
     }
     
-   
+    
+    func uploadUserData(uid: String, username: String, email: String){
+        
+        let storageRef = Storage.storage().reference().child("profile_image").child(uid)
+      
+       
+        guard let image = selectedImage else { return }
+        guard let uploadData = image.jpegData(compressionQuality: 0.1) else { return }//BILD WIRD COMPRIMIERT DA BRAUCHT MAN NICHT GROß für profilfoto
+        
+        storageRef.putData(uploadData, metadata: nil){
+            (metadata, error) in
+            if let err = error {
+                print(err.localizedDescription)
+                return
+            }
+            storageRef.downloadURL(completion: { (url, error) in//PHYSIKALISCHE BILD IN STORAGE SPEICHERN
+                if error != nil{
+                    print(error?.localizedDescription)
+                    return
+                }
+                let profilImageUrlString = url?.absoluteString
+                print(profilImageUrlString!)
+                
+                
+                //ADRESSE IN DATENBANK HINZUFÜGEN
+                let ref = Database.database(url: "https://mersegram-default-rtdb.europe-west1.firebasedatabase.app/").reference().child("users").child(uid)
+                ref.setValue(["username": self.userNameTextField.text!, "email": self.emailTextField.text!, "profilImageURL" : profilImageUrlString ?? "kein Bild vorhanden"])
+                
+               
+            })
+        }
+        
+       
+        
+       // let storageRef = Storage.storage().reference().child("profil_image").child(uid)
+       
+        
+        
+        
+    }
     
     
     
