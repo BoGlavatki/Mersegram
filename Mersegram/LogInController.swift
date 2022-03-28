@@ -100,11 +100,13 @@ class LogInController: UIViewController {
         
         AuthenticationService.signIn(email: emailTextField.text!, password: passwordTextField.text!, onSuccess: {
             self.performSegue(withIdentifier: "loginSegue", sender: nil)
-        }){
-            (error) in
+        },
+                                     onError: { error in
             print(error!)
+        })
+            
         }
-        }
+        
     
     
     

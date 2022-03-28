@@ -7,12 +7,13 @@
 
 import UIKit
 
- import FirebaseAuthUI
+ 
 import FirebaseAuth
 import Firebase
 import FirebaseCore
 import FirebaseDatabase
 import FirebaseStorage
+
 
 class RegistrationViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -173,7 +174,7 @@ class RegistrationViewController: UIViewController, UIImagePickerControllerDeleg
     
     func uploadUserData(uid: String, username: String, email: String){
         
-        let storageRef = Storage.storage().reference().child("profile_image").child(uid)
+        let storageRef = Storage.storage().reference().child("profile_image").child(uid)//DIESE METHODE GEHT IN SPEICHER - AUF WEB SEITE - UND SPEICHERT DORT DEN PROFILEDATEN
       
        
         guard let image = selectedImage else { return }
