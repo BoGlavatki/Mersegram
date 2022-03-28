@@ -21,15 +21,14 @@ class HomeViewController: UIViewController {
     //MARK - LOGOUT BUTTON ACTION
 
     @IBAction func logoutButtonTapped(_ sender: Any) {
-        
-        do{
-          try  Auth.auth().signOut()
-        }catch let logoutError{
-            print(logoutError.localizedDescription)
+        AuthenticationService.logOut(onSuccess: {
+            let storyboard = UIStoryboard(name: "Start", bundle: nil)
+            let loginVC = storyboard.instantiateViewController(withIdentifier: "loginVC")
+            self.present(loginVC, animated: true, completion: nil)
+        }) {
+        (error) in
+            print(error!)
         }
-        
-        let storyboard = UIStoryboard(name: "Start", bundle: nil)
-        let loginVC = storyboard.instantiateViewController(withIdentifier: "loginVC")
-        present(loginVC, animated: true, completion: nil)
-}
+    }
+    
 }

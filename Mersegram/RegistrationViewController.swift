@@ -153,64 +153,30 @@ class RegistrationViewController: UIViewController, UIImagePickerControllerDeleg
     //ERSTELLEN DES USERS NACH DEM BUTTEN ERSTELLEN ANGETIPT WIRD
     @IBAction func createButtonTaped(_ sender: UIButton) {
      
-        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { [self] (data, error) in
-            if let err = error{
-                print(err.localizedDescription)
-                return
-            }
-         
-            guard let newUser = data?.user else{ return }
-            let uId = newUser.uid
-            print("User: ", newUser.email , " ID: ", uId)
-           
-            self.uploadUserData(uid: uId, username:  self.userNameTextField.text!, email: self.emailTextField.text!)
-            self.performSegue(withIdentifier: "loginSegue", sender: nil)
-           
+        view.endEditing(true)
+        
+        if selectedImage == nil {
+            print("Bitte Foto wahlen")
+            return
+        }
+        
+        
+        guard let image = selectedImage else {return}
+        guard let imageData = image.jpegData(compressionQuality: 0.1) else{ return }
+        
+        
+        AuthenticationService.createUser(username: userNameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, imageData: imageData, onSuccess:  {
+            self.performSegue(withIdentifier: "registerSegue", sender: nil)
+        }){
+            (error) in
+            print(error!)
             
         }
         
     }
     
     
-    func uploadUserData(uid: String, username: String, email: String){
-        
-        let storageRef = Storage.storage().reference().child("profile_image").child(uid)//DIESE METHODE GEHT IN SPEICHER - AUF WEB SEITE - UND SPEICHERT DORT DEN PROFILEDATEN
-      
-       
-        guard let image = selectedImage else { return }
-        guard let uploadData = image.jpegData(compressionQuality: 0.1) else { return }//BILD WIRD COMPRIMIERT DA BRAUCHT MAN NICHT GROß für profilfoto
-        
-        storageRef.putData(uploadData, metadata: nil){
-            (metadata, error) in
-            if let err = error {
-                print(err.localizedDescription)
-                return
-            }
-            storageRef.downloadURL(completion: { (url, error) in//PHYSIKALISCHE BILD IN STORAGE SPEICHERN
-                if error != nil{
-                    print(error?.localizedDescription)
-                    return
-                }
-                let profilImageUrlString = url?.absoluteString
-                print(profilImageUrlString!)
-                
-                
-                //ADRESSE IN DATENBANK HINZUFÜGEN
-                let ref = Database.database(url: "https://mersegram-default-rtdb.europe-west1.firebasedatabase.app/").reference().child("users").child(uid)
-                ref.setValue(["username": self.userNameTextField.text!, "email": self.emailTextField.text!, "profilImageURL" : profilImageUrlString ?? "kein Bild vorhanden"])
-                
-               
-            })
-        }
-        
-       
-        
-       // let storageRef = Storage.storage().reference().child("profil_image").child(uid)
-       
-        
-        
-        
-    }
+   
     
     
     

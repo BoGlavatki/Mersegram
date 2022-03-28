@@ -43,12 +43,8 @@ class LogInController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if Auth.auth().currentUser != nil{
-            DispatchQueue.main.async {
-                Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {(timer) in
-                        self.performSegue(withIdentifier: "loginSegue", sender: nil)
-                })
-            }
+        AuthenticationService.automaticSingIn {
+            self.performSegue(withIdentifier: "loginSegue", sender: nil)
         }
     }
     

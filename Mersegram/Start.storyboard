@@ -178,7 +178,7 @@
                         <outlet property="passwordTextField" destination="zbU-8l-mGo" id="JWe-hT-Ari"/>
                         <outlet property="profileImageView" destination="hrd-aQ-Moa" id="3fo-kb-Q2Y"/>
                         <outlet property="userNameTextField" destination="Typ-jf-3Fy" id="bu8-zf-0rJ"/>
-                        <segue destination="NSu-DP-jBL" kind="presentation" identifier="loginSegue" id="Ufc-VY-xl4"/>
+                        <segue destination="NSu-DP-jBL" kind="presentation" identifier="registerSegue" id="Ufc-VY-xl4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="haV-gY-SXg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -195,7 +195,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dDh-Jo-V1C"/>
+        <segue reference="Ufc-VY-xl4"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="profil_placeholder" width="100" height="100"/>
