@@ -93,12 +93,15 @@ class LogInController: UIViewController {
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         view.endEditing(true)
-        
+        ProgressHUD.show("Lade...", interaction:false)
         AuthenticationService.signIn(email: emailTextField.text!, password: passwordTextField.text!, onSuccess: {
+            print("eingelogt")
+            ProgressHUD.showSuccess("Eingellogt")
             self.performSegue(withIdentifier: "loginSegue", sender: nil)
         },
                                      onError: { error in
-            print(error!)
+            //print(error!)
+            ProgressHUD.showError("Email oder password falsch")
         })
             
         }

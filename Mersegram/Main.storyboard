@@ -44,31 +44,31 @@
         <scene sceneID="4Qd-km-QE1">
             <objects>
                 <viewControllerPlaceholder storyboardName="Discovery" id="Y4a-38-64z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="HIe-ux-jGN"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="discover" id="HIe-ux-jGN"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ueP-BA-iBY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-864" y="2092"/>
         </scene>
-        <!--Activity-->
-        <scene sceneID="M7k-Je-xrs">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Activity" id="wrO-zt-sUe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="xkX-xT-bei"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W0F-Pw-suH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1209" y="2119"/>
-        </scene>
         <!--Share-->
         <scene sceneID="W9B-c7-C16">
             <objects>
                 <viewControllerPlaceholder storyboardName="Share" id="OiK-0k-P4a" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="SG3-tP-Svi"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="Kamera" id="SG3-tP-Svi"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="seD-Qc-AWZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1462" y="2092"/>
+            <point key="canvasLocation" x="-1210" y="2113"/>
+        </scene>
+        <!--Activity-->
+        <scene sceneID="M7k-Je-xrs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Activity" id="wrO-zt-sUe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="Activity" selectedImage="Activity_Filled" id="xkX-xT-bei"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W0F-Pw-suH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2151" y="2069"/>
         </scene>
         <!--Profile-->
         <scene sceneID="g0F-a0-7Ou">
@@ -78,10 +78,14 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wCc-Fs-Zbn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1662" y="2069"/>
+            <point key="canvasLocation" x="-1735" y="2092"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Activity" width="25" height="25"/>
+        <image name="Activity_Filled" width="25" height="25"/>
+        <image name="Kamera" width="60" height="60"/>
+        <image name="discover" width="60" height="60"/>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

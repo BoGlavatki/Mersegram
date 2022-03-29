@@ -27,6 +27,8 @@
 		78989F6127EB2F64007C0176 /* Share.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78989F6027EB2F64007C0176 /* Share.storyboard */; };
 		78989F6327EB2F77007C0176 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78989F6227EB2F77007C0176 /* Profile.storyboard */; };
 		78989F6527EBC21C007C0176 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78989F6427EBC21C007C0176 /* AuthenticationService.swift */; };
+		78989F6727F1D72B007C0176 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78989F6627F1D72A007C0176 /* ProgressHUD.swift */; };
+		78989F6927F207DF007C0176 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78989F6827F207DF007C0176 /* test.swift */; };
 		78D6220927EB23290075AD4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78D6220827EB23290075AD4F /* Main.storyboard */; };
 		78E9FB3B27EA2CE60056B647 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E9FB3A27EA2CE60056B647 /* HomeViewController.swift */; };
 		78E9FB3D27EA2CFA0056B647 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E9FB3C27EA2CFA0056B647 /* DiscoveryViewController.swift */; };
@@ -78,6 +80,8 @@
 		78989F6027EB2F64007C0176 /* Share.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Share.storyboard; sourceTree = "<group>"; };
 		78989F6227EB2F77007C0176 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		78989F6427EBC21C007C0176 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		78989F6627F1D72A007C0176 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		78989F6827F207DF007C0176 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		78D6220827EB23290075AD4F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		78E9FB3A27EA2CE60056B647 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		78E9FB3C27EA2CFA0056B647 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
@@ -186,10 +190,12 @@
 				78E9FB3A27EA2CE60056B647 /* HomeViewController.swift */,
 				78E9FB3C27EA2CFA0056B647 /* DiscoveryViewController.swift */,
 				78E9FB3E27EA2D030056B647 /* ShareViewController.swift */,
+				78989F6827F207DF007C0176 /* test.swift */,
 				78E9FB4027EA2D0F0056B647 /* ActivityViewController.swift */,
 				78E9FB4227EA2D180056B647 /* ProfileViewController.swift */,
 				78989F6427EBC21C007C0176 /* AuthenticationService.swift */,
 				782D534727E6748E00FB97C4 /* RegistrationViewController.swift */,
+				78989F6627F1D72A007C0176 /* ProgressHUD.swift */,
 			);
 			path = Mersegram;
 			sourceTree = "<group>";
@@ -458,10 +464,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				78E9FB3F27EA2D030056B647 /* ShareViewController.swift in Sources */,
+				78989F6927F207DF007C0176 /* test.swift in Sources */,
 				78E9FB3B27EA2CE60056B647 /* HomeViewController.swift in Sources */,
 				78E9FB3D27EA2CFA0056B647 /* DiscoveryViewController.swift in Sources */,
 				78E9FB4127EA2D0F0056B647 /* ActivityViewController.swift in Sources */,
 				782D531427E6439900FB97C4 /* AppDelegate.swift in Sources */,
+				78989F6727F1D72B007C0176 /* ProgressHUD.swift in Sources */,
 				782D534627E6745100FB97C4 /* LogInController.swift in Sources */,
 				78E9FB4327EA2D180056B647 /* ProfileViewController.swift in Sources */,
 				782D534827E6748E00FB97C4 /* RegistrationViewController.swift in Sources */,

@@ -11,7 +11,10 @@ class ActivityViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+        
+        //MARK: - Outlet
+        
+        
         // Do any additional setup after loading the view.
     }
     

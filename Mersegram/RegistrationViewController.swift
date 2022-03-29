@@ -156,21 +156,23 @@ class RegistrationViewController: UIViewController, UIImagePickerControllerDeleg
         view.endEditing(true)
         
         if selectedImage == nil {
-            print("Bitte Foto wahlen")
+            ProgressHUD.showError("Bitte Foto wählen")
             return
         }
         
         
         guard let image = selectedImage else {return}
         guard let imageData = image.jpegData(compressionQuality: 0.1) else{ return }
-        
+        ProgressHUD.show("Lade...", interaction: false)
         
         AuthenticationService.createUser(username: userNameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, imageData: imageData, onSuccess:  {
+            ProgressHUD.showSuccess()
+            print("eingelogt")
             self.performSegue(withIdentifier: "registerSegue", sender: nil)
         }){
             (error) in
-            print(error!)
-            
+           // print(error!)
+            ProgressHUD.showError("User konnte nicht erstellt werden")
         }
         
     }
