@@ -74,11 +74,51 @@ class CameraViewController: UIViewController {
         saveButton.isHidden = false
         cancelButton.isHidden = false
     }
+    //MARK: - switch camera
     
     @IBAction func cameraSwitchTaped(_ sender: UIButton) {
+        switchCamera()
     print("camera Switched")
     }
-    
+    func switchCamera(){
+     guard let input = captureSession.inputs[0] as? AVCaptureDeviceInput else { return}
+        
+        captureSession.beginConfiguration()
+        defer { captureSession.commitConfiguration() }
+        
+        var newDevice: AVCaptureDevice?
+        
+        if input.device.position == .back{
+            newDevice = captureDevice(with: .front)
+        } else {
+            newDevice = captureDevice(with: .back)
+        }
+        
+        //NEUES IMPUT
+        
+        var deviceInput: AVCaptureDeviceInput!
+        do{
+            guard let device = newDevice else { return }
+            deviceInput = try AVCaptureDeviceInput (device: device)
+        } catch let error {
+            ProgressHUD.showError(error.localizedDescription)
+        }
+        
+        captureSession.removeInput(input)
+        captureSession.addInput(deviceInput)
+        
+        
+        
+    }
+    func captureDevice(with position: AVCaptureDevice.Position) ->AVCaptureDevice? {
+        let devices = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera, .builtInTelephotoCamera, .builtInWideAngleCamera], mediaType: .video, position: .unspecified).devices
+        for device in devices {
+            if device.position == position{
+                return device
+            }
+        }
+        return nil
+    }
     @IBAction func saveButtonTaped(_ sender: UIButton) {
         print("save")
     }
