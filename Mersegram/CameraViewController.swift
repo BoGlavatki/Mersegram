@@ -156,8 +156,14 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         }
 
     }
+    //MARK: - Cancle
     @IBAction func cancelButtonTaped(_ sender: UIButton) {
-        print("cancel")
+       cancle()
+    }
+    func cancle(){
+        previewPhotoView.image = nil
+        cancelButton.isHidden = true
+        saveButton.isHidden = true
     }
     
     //MARK: - Dismiss
