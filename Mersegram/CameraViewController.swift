@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 
-class CameraViewController: UIViewController {
+class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     //MARK: - Outlet
     
     @IBOutlet weak var previewPhotoView: UIImageView!
@@ -69,10 +69,23 @@ class CameraViewController: UIViewController {
     
     
     @IBAction func cameraButtonTaped(_ sender: UIButton) {
-        print("Photo gemacht")
+       
+    }
+    func takePhoto(){
+        let settings = AVCapturePhotoSettings()
         
-        saveButton.isHidden = false
-        cancelButton.isHidden = false
+        guard let previewFormatType = settings.availablePreviewPhotoPixelFormatTypes.first else { return }
+        settings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String : previewFormatType]
+        photoOutput.capturePhoto(with: settings, delegate: self)
+    }
+    //BESCHREIBT WIE PHOTO DARGESTELLT WERDEN MUSS
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        if let imageData = photo.fileDataRepresentation() {
+            previewPhotoView.image = UIImage(data: imageData)
+            saveButton.isHidden = false
+            cancelButton.isHidden = false
+            
+        }
     }
     //MARK: - switch camera
     
