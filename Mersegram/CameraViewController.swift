@@ -169,8 +169,9 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     //MARK: - Dismiss
     
     @IBAction func dismissButtonTapped(_ sender: UIButton) {
-        print("dismiss")
+    dismiss(animated: true, completion: nil)
     }
+    
     
     
 }
