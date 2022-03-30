@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import Photos
 
 class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     //MARK: - Outlet
@@ -71,6 +72,7 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     @IBAction func cameraButtonTaped(_ sender: UIButton) {
        
     }
+    // METHODE takePhoto - für photo machen (quasi wird auf dem Bildschirm gezeigt(gespechert)  )
     func takePhoto(){
         let settings = AVCapturePhotoSettings()
         
@@ -132,10 +134,28 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         }
         return nil
     }
-    @IBAction func saveButtonTaped(_ sender: UIButton) {
-        print("save")
-    }
+    //MARK: - Save Photo
     
+    @IBAction func saveButtonTaped(_ sender: UIButton) {
+        savePhoto()
+    }
+    func savePhoto(){
+        let library = PHPhotoLibrary.shared()
+        guard let image = previewPhotoView.image else {return}
+        
+        library.performChanges ({
+            PHAssetChangeRequest.creationRequestForAsset(from: image)
+        }) { (success, error) in
+            if error != nil{
+                ProgressHUD.showError(error?.localizedDescription)
+                return
+            } else {
+                ProgressHUD.showSuccess("Fotogespeichert")
+            }
+            
+        }
+
+    }
     @IBAction func cancelButtonTaped(_ sender: UIButton) {
         print("cancel")
     }
