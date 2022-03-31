@@ -8,6 +8,8 @@
 import Foundation
 
 class UserModel{
+    
+    
     var username: String?
     var email: String?
     var profilImageUrl: String?
@@ -16,7 +18,7 @@ class UserModel{
         
         username = dictionary["username"] as? String
         email = dictionary ["email"] as? String
-        profilImageUrl = dictionary["profilImageUrl"] as? String
+        profilImageUrl = dictionary["profilImageURL"] as? String
         
         
     }

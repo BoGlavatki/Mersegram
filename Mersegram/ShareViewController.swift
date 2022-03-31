@@ -25,7 +25,7 @@ class ShareViewController: UIViewController, UIImagePickerControllerDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .green
+        //view.backgroundColor = .green
         navigationItem.title = "SHARE"
         
         addTapGestureToImageView()

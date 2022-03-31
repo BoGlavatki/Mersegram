@@ -29,6 +29,7 @@ class HomeTableViewCell: UITableViewCell {
         didSet{
             guard let _posText = post?.postText else { return }
             guard let _imageUrl = post?.imageUrl else { return }
+            print("****POSTIMAGE URL: ", _imageUrl)
             updateCellView(postText: _posText, imageUrl: _imageUrl)
             
         }
@@ -50,6 +51,7 @@ class HomeTableViewCell: UITableViewCell {
             
             guard let _username = user?.username else {print("kein username")
                 return }
+            print("USERNAME", _username)
             guard let _profilImage = user?.profilImageUrl else { print("kein imageprof")
                 return }
             setupUserInfo(username: _username, profilImage: _profilImage)
@@ -57,9 +59,9 @@ class HomeTableViewCell: UITableViewCell {
     }
     
     func setupUserInfo(username: String, profilImage: String){
+      
         nameLabel.text = username
-        guard let url = URL(string: profilImage) else { print("kein imageprofil")
-            return }
+        guard let url = URL(string: profilImage) else { return }
         profilImageView.sd_setImage(with: url) { (_, _, _, _) in
             
         }
@@ -69,14 +71,14 @@ class HomeTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-       
         profilImageView.layer.cornerRadius = profilImageView.frame.width / 2
-        
-        
-        
         
     }
 
-   
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        profilImageView.image = UIImage(named: "placeholder")
+    }
 
 }
