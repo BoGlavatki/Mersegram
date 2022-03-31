@@ -7,7 +7,6 @@
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
 		<key>UISceneConfigurations</key>
-     
 		<dict>
 			<key>UIWindowSceneSessionRoleApplication</key>
 			<array>
@@ -22,6 +21,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Zugriff auf Kamera erlauben</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Zugriff zu fotos</string>
 </dict>
-
 </plist>

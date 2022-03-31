@@ -27,6 +27,10 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
 
         // Do any additional setup after loading the view.
     }
+    //MARK: - statusbar
+    override var prefersStatusBarHidden: Bool{
+        return true//VERSCHWINDET STATUS BAR 
+    }
     //MARK: - Kamera erstellen
     func setupCaptureSession(){
         // 1. CaptureSession
@@ -70,8 +74,7 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     
     
     @IBAction func cameraButtonTaped(_ sender: UIButton) {
-       
-    }
+        takePhoto()    }
     // METHODE takePhoto - für photo machen (quasi wird auf dem Bildschirm gezeigt(gespechert)  )
     func takePhoto(){
         let settings = AVCapturePhotoSettings()

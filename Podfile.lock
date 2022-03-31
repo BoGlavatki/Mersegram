@@ -125,6 +125,7 @@ DEPENDENCIES:
   - FirebaseUI/Auth
   - FirebaseUI/Database
   - FirebaseUI/Storage
+  - SDWebImage
 
 SPEC REPOS:
   trunk:
@@ -171,6 +172,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
 
-PODFILE CHECKSUM: 0e3bedd74f235ba03f0ab55993f39d95057d36ab
+PODFILE CHECKSUM: 6894acb2b3d45b1f767d64511dc9c5f6bbd0f4d3
 
 COCOAPODS: 1.11.3

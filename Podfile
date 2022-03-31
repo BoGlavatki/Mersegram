@@ -9,7 +9,8 @@ target 'Mersegram' do
   pod 'Firebase/Auth'
   pod 'FirebaseUI/Auth'
   pod 'FirebaseUI/Database'
-	pod 'FirebaseUI/Storage'	
+	pod 'FirebaseUI/Storage'
+  pod 'SDWebImage'
   # Pods for Mersegram
 
   target 'MersegramTests' do

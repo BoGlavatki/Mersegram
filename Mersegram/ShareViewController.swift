@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseStorage
 import FirebaseDatabase
+import FirebaseAuth
 
 class ShareViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -139,10 +140,12 @@ class ShareViewController: UIViewController, UIImagePickerControllerDelegate, UI
     func uploadDataToDatabase(imageUrl: String){
         let databaseRef = Database.database(url: "https://mersegram-default-rtdb.europe-west1.firebasedatabase.app/").reference().child("posts")
         let newPostId = databaseRef.childByAutoId().key
-        
         let newPostRefernce = databaseRef.child(newPostId!)
         
-        let dic = ["imageUrl" : imageUrl, "postText": postTextView.text] as [String: Any]
+        guard let userUid = Auth.auth().currentUser?.uid else { return }
+        
+        
+        let dic = ["uid" : userUid, "imageUrl" : imageUrl, "postText": postTextView.text] as [String: Any]
         newPostRefernce.setValue(dic) { (error, ref)in
             if error != nil {
                 ProgressHUD.showError("Fehler, Daten konnten nicht hochgeladen werden")
