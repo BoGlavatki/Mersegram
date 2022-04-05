@@ -231,7 +231,7 @@
                                             <constraint firstAttribute="height" constant="34" id="Mdm-5c-jZF"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="SEND">
+                                        <buttonConfiguration key="configuration" style="plain" title="send">
                                             <color key="baseForegroundColor" systemColor="systemGray5Color"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -268,6 +268,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="bAa-Z5-v2K"/>
                     <connections>
+                        <outlet property="bottom" destination="Y4z-mn-ZTz" id="GUw-Rr-cNT"/>
                         <outlet property="bottomConstraint" destination="xEv-8r-pOG" id="xse-OL-529"/>
                         <outlet property="ommentTextField" destination="XZQ-st-fEe" id="cnc-jb-Pvb"/>
                         <outlet property="sendButton" destination="mom-Eo-hF1" id="y9p-4j-Osg"/>

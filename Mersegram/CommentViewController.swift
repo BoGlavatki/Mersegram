@@ -13,9 +13,10 @@ class CommentViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var ommentTextField: UIView!
    
-    @IBOutlet weak var bottom: NSLayoutConstraint!
+
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var bottom: NSLayoutConstraint!
     
     @IBOutlet weak var textField: UITextField!
     
@@ -24,10 +25,15 @@ class CommentViewController: UIViewController {
         super.viewDidLoad()
         
             tableView.dataSource = self
+        tableView.tableFooterView = UIView(frame: .zero)
+        tableView.keyboardDismissMode = .interactive
 
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHidden(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        addTargetToTextField()
+        empty()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,6 +65,9 @@ class CommentViewController: UIViewController {
     }
     func addTargetToTextField(){
         textField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
+       
+    }
+    @objc func textFieldDidChange(){
         let isText = textField.text?.count ?? 0 > 0
         
         if isText{
@@ -67,18 +76,18 @@ class CommentViewController: UIViewController {
         }else{
             sendButton.setTitleColor(.lightGray, for: UIControl.State.normal)
             sendButton.isEnabled = false
-        }
-    }
-    @objc func textFieldDidChange(){
-        
-    }
+        }    }
     //MARK: _ Send Comment
     
     @IBAction func sendButtonTapped(_ sender: UIButton) {
     print("KOMMENTAR SENDEN")
         view.endEditing(true)
     }
-    
+    func empty(){
+        textField.text=""
+        sendButton.isEnabled = false
+        sendButton.setTitleColor(.lightGray, for: UIControl.State.normal)
+    }
 }
 
 
