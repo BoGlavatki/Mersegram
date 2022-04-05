@@ -106,8 +106,19 @@ extension HomeViewController: UITableViewDataSource{
         cell.post = posts[indexPath.row]
         
         cell.user = users[indexPath.row]
+        
+        cell.homeViewController = self
        // cell.postTextLabel.text = posts[indexPath.row].postText
         
         return cell //JEdes mal wird zeile Post gemacht und so oft bis alle Posts
     }
+}
+
+//MARK: HOMETabelViewCellDelegate 
+extension HomeViewController: HomeTableViewCellDelegate{
+    func didTapCommentImageView() {
+        performSegue(withIdentifier: "showCommentViewController", sender: nil)
+    }
+    
+    
 }

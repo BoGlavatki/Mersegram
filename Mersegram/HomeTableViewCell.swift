@@ -8,6 +8,10 @@
 import UIKit
 import SDWebImage
 
+protocol HomeTableViewCellDelegate{
+    func didTapCommentImageView()
+}
+
 class HomeTableViewCell: UITableViewCell {
 //MARK: - OUTLET
     
@@ -67,12 +71,28 @@ class HomeTableViewCell: UITableViewCell {
         }
         }
     
+    //MARK: -Navigation to CommentViewController/ Übergang
+    var homeViewController: HomeTableViewCellDelegate?//HIER WIRD EINE REFERENZ VOM HOMEVIEWCONTROLLER GESPEICHERT WERDEN
     
     
+    func addTapGestureToImageView(){
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleDidTapComment))
+        commentImageView.addGestureRecognizer(tapGesture)
+        commentImageView.isUserInteractionEnabled = true
+    }
+    
+    @objc func handleDidTapComment(){
+     print("HAT GEKLAPT!")
+        
+       homeViewController?.didTapCommentImageView()//ÜBERGANG ZU KOMMENAARE
+    }
+    
+    
+    //MARK: - Cell awake / Wenn die ZEile erstellt wird
     override func awakeFromNib() {
         super.awakeFromNib()
         profilImageView.layer.cornerRadius = profilImageView.frame.width / 2
-        
+        addTapGestureToImageView()
     }
 
     override func prepareForReuse() {

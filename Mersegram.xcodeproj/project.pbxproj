@@ -34,6 +34,8 @@
 		78BD65ED27F4F28400DF60D8 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BD65EC27F4F28400DF60D8 /* PostModel.swift */; };
 		78BD65EF27F50FD300DF60D8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BD65EE27F50FD300DF60D8 /* UserModel.swift */; };
 		78D6220927EB23290075AD4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78D6220827EB23290075AD4F /* Main.storyboard */; };
+		78E2530427F72D04001218E5 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2530327F72D04001218E5 /* CommentViewController.swift */; };
+		78E2530627F74207001218E5 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2530527F74207001218E5 /* CommentTableViewCell.swift */; };
 		78E9FB3B27EA2CE60056B647 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E9FB3A27EA2CE60056B647 /* HomeViewController.swift */; };
 		78E9FB3D27EA2CFA0056B647 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E9FB3C27EA2CFA0056B647 /* DiscoveryViewController.swift */; };
 		78E9FB3F27EA2D030056B647 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E9FB3E27EA2D030056B647 /* ShareViewController.swift */; };
@@ -91,6 +93,8 @@
 		78BD65EC27F4F28400DF60D8 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		78BD65EE27F50FD300DF60D8 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		78D6220827EB23290075AD4F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		78E2530327F72D04001218E5 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		78E2530527F74207001218E5 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		78E9FB3A27EA2CE60056B647 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		78E9FB3C27EA2CFA0056B647 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
 		78E9FB3E27EA2D030056B647 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 				78989F5E27EB2F30007C0176 /* Activity.storyboard */,
 				78989F5C27EB2F0B007C0176 /* Discovery.storyboard */,
 				78989F5A27EB2EF2007C0176 /* Home.storyboard */,
+				78E2530327F72D04001218E5 /* CommentViewController.swift */,
+				78E2530527F74207001218E5 /* CommentTableViewCell.swift */,
 				78BD65EA27F4E40000DF60D8 /* HomeTableViewCell.swift */,
 				78E9FB3A27EA2CE60056B647 /* HomeViewController.swift */,
 				78BD65EE27F50FD300DF60D8 /* UserModel.swift */,
@@ -480,6 +486,7 @@
 				78989F6927F207DF007C0176 /* test.swift in Sources */,
 				78BD65EB27F4E40000DF60D8 /* HomeTableViewCell.swift in Sources */,
 				78E9FB3B27EA2CE60056B647 /* HomeViewController.swift in Sources */,
+				78E2530427F72D04001218E5 /* CommentViewController.swift in Sources */,
 				78E9FB3D27EA2CFA0056B647 /* DiscoveryViewController.swift in Sources */,
 				7836532627F34F3600DBA3A1 /* CameraViewController.swift in Sources */,
 				78E9FB4127EA2D0F0056B647 /* ActivityViewController.swift in Sources */,
@@ -487,6 +494,7 @@
 				78989F6727F1D72B007C0176 /* ProgressHUD.swift in Sources */,
 				78BD65EF27F50FD300DF60D8 /* UserModel.swift in Sources */,
 				782D534627E6745100FB97C4 /* LogInController.swift in Sources */,
+				78E2530627F74207001218E5 /* CommentTableViewCell.swift in Sources */,
 				78E9FB4327EA2D180056B647 /* ProfileViewController.swift in Sources */,
 				782D534827E6748E00FB97C4 /* RegistrationViewController.swift in Sources */,
 				782D531627E6439900FB97C4 /* SceneDelegate.swift in Sources */,
