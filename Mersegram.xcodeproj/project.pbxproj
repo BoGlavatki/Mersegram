@@ -20,6 +20,7 @@
 		782D534427E6444A00FB97C4 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782D534327E6444A00FB97C4 /* Start.storyboard */; };
 		782D534627E6745100FB97C4 /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782D534527E6745100FB97C4 /* LogInController.swift */; };
 		782D534827E6748E00FB97C4 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782D534727E6748E00FB97C4 /* RegistrationViewController.swift */; };
+		782DECDF27FCDD590077E4D0 /* CommentMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782DECDE27FCDD590077E4D0 /* CommentMode.swift */; };
 		7836532627F34F3600DBA3A1 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7836532527F34F3600DBA3A1 /* CameraViewController.swift */; };
 		78419D9827E8CCD4003C481C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78419D9727E8CCD4003C481C /* GoogleService-Info.plist */; };
 		78989F5B27EB2EF2007C0176 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78989F5A27EB2EF2007C0176 /* Home.storyboard */; };
@@ -79,6 +80,7 @@
 		782D534327E6444A00FB97C4 /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
 		782D534527E6745100FB97C4 /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
 		782D534727E6748E00FB97C4 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		782DECDE27FCDD590077E4D0 /* CommentMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentMode.swift; sourceTree = "<group>"; };
 		7836532527F34F3600DBA3A1 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		78419D9727E8CCD4003C481C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../../Users/boleslavglavatki/Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78989F5A27EB2EF2007C0176 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				78989F5C27EB2F0B007C0176 /* Discovery.storyboard */,
 				78989F5A27EB2EF2007C0176 /* Home.storyboard */,
 				78E2530327F72D04001218E5 /* CommentViewController.swift */,
+				782DECDE27FCDD590077E4D0 /* CommentMode.swift */,
 				78E2530527F74207001218E5 /* CommentTableViewCell.swift */,
 				78BD65EA27F4E40000DF60D8 /* HomeTableViewCell.swift */,
 				78E9FB3A27EA2CE60056B647 /* HomeViewController.swift */,
@@ -493,6 +496,7 @@
 				782D531427E6439900FB97C4 /* AppDelegate.swift in Sources */,
 				78989F6727F1D72B007C0176 /* ProgressHUD.swift in Sources */,
 				78BD65EF27F50FD300DF60D8 /* UserModel.swift in Sources */,
+				782DECDF27FCDD590077E4D0 /* CommentMode.swift in Sources */,
 				782D534627E6745100FB97C4 /* LogInController.swift in Sources */,
 				78E2530627F74207001218E5 /* CommentTableViewCell.swift in Sources */,
 				78E9FB4327EA2D180056B647 /* ProfileViewController.swift in Sources */,

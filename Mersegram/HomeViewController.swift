@@ -41,7 +41,7 @@ class HomeViewController: UIViewController {
         
         refDataasePosts.observe(.childAdded) { (snapshot) in
             guard let dic = snapshot.value as? [String: Any] else { return }
-            let newPost = PostModel(dictionary: dic)
+            let newPost = PostModel(dictionary: dic, key: snapshot.key)//SNAPSHOT IST DIE NUMMER VON DIESEN KEY 
             
             guard let userUid = newPost.uid else { return }
             self.fetchUser(uid: userUid, completed: {
@@ -87,7 +87,15 @@ class HomeViewController: UIViewController {
         tableView.setContentOffset(CGPoint.zero, animated: true)
         
     }
+    //MARK: - NAVIAGTION
+    var post: PostModel!
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showCommentViewController"{
+            let commentVC = segue.destination as! CommentViewController
+            commentVC.post = self.post
+        }
+    }
  
 }
 //MARK: TABLEVIEW DATASOURCE
@@ -116,7 +124,8 @@ extension HomeViewController: UITableViewDataSource{
 
 //MARK: HOMETabelViewCellDelegate 
 extension HomeViewController: HomeTableViewCellDelegate{
-    func didTapCommentImageView() {
+    func didTapCommentImageView(post: PostModel) {
+        self.post = post
         performSegue(withIdentifier: "showCommentViewController", sender: nil)
     }
     

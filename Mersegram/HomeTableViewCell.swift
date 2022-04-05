@@ -9,9 +9,9 @@ import UIKit
 import SDWebImage
 
 protocol HomeTableViewCellDelegate{
-    func didTapCommentImageView()
+    func didTapCommentImageView(post: PostModel)
 }
-
+//HOME TABLE VIEW CELL ERSTELLT ZEILE - POST
 class HomeTableViewCell: UITableViewCell {
 //MARK: - OUTLET
     
@@ -33,7 +33,7 @@ class HomeTableViewCell: UITableViewCell {
         didSet{
             guard let _posText = post?.postText else { return }
             guard let _imageUrl = post?.imageUrl else { return }
-            print("****POSTIMAGE URL: ", _imageUrl)
+            
             updateCellView(postText: _posText, imageUrl: _imageUrl)
             
         }
@@ -53,9 +53,8 @@ class HomeTableViewCell: UITableViewCell {
     var user: UserModel? {
         didSet {
             
-            guard let _username = user?.username else {print("kein username")
-                return }
-            print("USERNAME", _username)
+            guard let _username = user?.username else {return }
+          
             guard let _profilImage = user?.profilImageUrl else { print("kein imageprof")
                 return }
             setupUserInfo(username: _username, profilImage: _profilImage)
@@ -82,9 +81,9 @@ class HomeTableViewCell: UITableViewCell {
     }
     
     @objc func handleDidTapComment(){
-     print("HAT GEKLAPT!")
         
-       homeViewController?.didTapCommentImageView()//ÜBERGANG ZU KOMMENAARE
+        guard let post = post else { return }
+       homeViewController?.didTapCommentImageView(post: post)//ÜBERGANG ZU KOMMENAARE
     }
     
     

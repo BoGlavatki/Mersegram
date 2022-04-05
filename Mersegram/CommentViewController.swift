@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class CommentViewController: UIViewController {
     
@@ -19,6 +21,8 @@ class CommentViewController: UIViewController {
     @IBOutlet weak var bottom: NSLayoutConstraint!
     
     @IBOutlet weak var textField: UITextField!
+    //MARK: VAR LET
+    var post: PostModel?
     
     //MARK: View Lifecycle
     override func viewDidLoad() {
@@ -34,6 +38,9 @@ class CommentViewController: UIViewController {
         
         addTargetToTextField()
         empty()
+        loadComments()
+        
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -80,14 +87,62 @@ class CommentViewController: UIViewController {
     //MARK: _ Send Comment
     
     @IBAction func sendButtonTapped(_ sender: UIButton) {
-    print("KOMMENTAR SENDEN")
-        view.endEditing(true)
+        createComment()
+        
+    }
+    
+    //MARK: Create UserComment in FirebaseDatabase
+    func createComment(){
+        
+        let refDatabase = Database.database(url:"https://mersegram-default-rtdb.europe-west1.firebasedatabase.app").reference()
+        let refComments = refDatabase.child("comments")//BENENEN Die abteilung
+        let commetnId = refComments.childByAutoId().key ?? "" //ID zuweisen
+        
+        let newCommentRef = refComments.child(commetnId) // zugewissene ID des Kommentars als Bereich erstellen
+        
+      guard let uid = Auth.auth().currentUser?.uid else { return}
+        
+        let dic = ["uid" : uid, "commentText" : textField.text] as [String : Any]
+        newCommentRef.setValue(dic) {(error, ref) in //Text von textFeld einlesen und in Dictionary speichern
+            if error != nil {
+                ProgressHUD.showError(error?.localizedDescription)
+            }
+            guard let postId = self.post?.id else { return }
+            let postCommentRef = Database.database(url:"https://mersegram-default-rtdb.europe-west1.firebasedatabase.app").reference().child("post-commets").child(postId).child(commetnId)
+            postCommentRef.setValue(true, withCompletionBlock:  { (error, ref )in
+                if error != nil {
+                    ProgressHUD.showError(error?.localizedDescription)
+                    return
+                }
+                self.view.endEditing(true)
+                self.empty()
+            })
+        }
+        
     }
     func empty(){
         textField.text=""
         sendButton.isEnabled = false
         sendButton.setTitleColor(.lightGray, for: UIControl.State.normal)
     }
+    //MARK: LOAD COMMENTS
+    
+    func loadComments(){
+        guard let postID = post?.id else {return}
+            let postCommentRef = Database.database(url:"https://mersegram-default-rtdb.europe-west1.firebasedatabase.app").reference().child("post-commets").child(postID)
+            
+        postCommentRef.observe(.childAdded) { (snapshot ) in
+            print("comment id ", snapshot.key)
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 
